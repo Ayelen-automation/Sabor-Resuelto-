@@ -1,0 +1,22 @@
+{
+  "name": "Sabor Resuelto",
+  "short_name": "Sabor Resuelto",
+  "description": "Packs de comida saludable en Mendoza",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F1DE",
+  "theme_color": "#3A5A4F",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

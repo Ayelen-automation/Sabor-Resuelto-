@@ -1,0 +1,19 @@
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.log
+
+# Project specific
+.gemini/
+.agents/
+.agent/
+_agents/
+_agent/
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db

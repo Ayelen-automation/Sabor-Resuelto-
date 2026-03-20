@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" width="500" height="200">
+  <!-- Fork -->
+  <g fill="#6B8E7A">
+    <path d="M80 60 L80 120 Q80 130 90 130 Q100 130 100 120 L100 60" stroke="#6B8E7A" stroke-width="3" fill="none"/>
+    <line x1="75" y1="50" x2="75" y2="70" stroke="#6B8E7A" stroke-width="3"/>
+    <line x1="80" y1="45" x2="80" y2="70" stroke="#6B8E7A" stroke-width="3"/>
+    <line x1="85" y1="50" x2="85" y2="70" stroke="#6B8E7A" stroke-width="3"/>
+  </g>
+  
+  <!-- Text "Sabor" -->
+  <text x="120" y="90" font-family="'Brush Script MT', cursive" font-size="48" fill="#6B8E7A" font-style="italic" font-weight="500">Sabor</text>
+  
+  <!-- Text "Resuelto" -->
+  <text x="110" y="135" font-family="'Brush Script MT', cursive" font-size="48" fill="#6B8E7A" font-style="italic" font-weight="500">Resuelto</text>
+  
+  <!-- Plant/Leaves -->
+  <g fill="#6B8E7A">
+    <ellipse cx="380" cy="70" rx="8" ry="12" transform="rotate(-30 380 70)"/>
+    <ellipse cx="395" cy="65" rx="8" ry="12" transform="rotate(-15 395 65)"/>
+    <ellipse cx="405" cy="75" rx="8" ry="12" transform="rotate(15 405 75)"/>
+    <ellipse cx="415" cy="85" rx="8" ry="12" transform="rotate(30 415 85)"/>
+    <line x1="380" y1="70" x2="415" y2="95" stroke="#6B8E7A" stroke-width="2"/>
+  </g>
+  
+  <!-- Swoosh curve -->
+  <path d="M 85 140 Q 250 155 420 135" stroke="#6B8E7A" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>
