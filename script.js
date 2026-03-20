@@ -218,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cookie Consent Logic
     const cookieConsent = document.getElementById('cookieConsent');
     const btnAcceptCookies = document.getElementById('btnAcceptCookies');
+    const btnCloseCookies = document.getElementById('btnCloseCookies');
     
     if (cookieConsent && btnAcceptCookies) {
         if (!localStorage.getItem('cookiesAccepted')) {
@@ -230,6 +231,12 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('cookiesAccepted', 'true');
             cookieConsent.classList.remove('show');
         });
+
+        if (btnCloseCookies) {
+            btnCloseCookies.addEventListener('click', () => {
+                cookieConsent.classList.remove('show');
+            });
+        }
     }
 
     // Premium Safe Floating Veggies
