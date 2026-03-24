@@ -53,7 +53,7 @@
     <meta property="og:url" content="https://saborresuelto.com.ar/">
     <meta property="og:title" content="Sabor Resuelto | Viandas Saludables en Mendoza">
     <meta property="og:description" content="Packs semanales de comida real y casera. Organizá tu semana con sabor y salud.">
-    <meta property="og:image" content="https://saborresuelto.com.ar/food1.jpg">
+    <meta property="og:image" content="https://saborresuelto.com.ar/food1.webp">
 
     <!-- JSON-LD Local Business Schema -->
     <script type="application/ld+json">
@@ -61,15 +61,102 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Sabor Resuelto",
-      "image": "https://saborresuelto.com.ar/logo-nuevo.png",
+      "image": "https://saborresuelto.com.ar/food1.webp",
+      "@id": "https://saborresuelto.com.ar",
+      "url": "https://saborresuelto.com.ar/",
+      "telephone": "+542615070320",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Mendoza",
+        "addressRegion": "Mendoza",
         "addressCountry": "AR"
       },
-      "url": "https://saborresuelto.com.ar/",
-      "priceRange": "$$",
+      "geo": {
+        "@type": "GeoCircle",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Viandas Saludables a Domicilio"
+        },
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": -32.8895,
+          "longitude": -68.8458
+        },
+        "description": "Gran Mendoza y Zona Este hasta San Roque"
+      },
+      "areaServed": ["Gran Mendoza", "Godoy Cruz", "Guaymallén", "Las Heras", "Luján", "Maipú", "San Martín", "Zona Este"],
       "servesCuisine": "Healthy, Homemade"
+    }
+    </script>
+    
+    <!-- JSON-LD Product Schema for Packs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Pack Individual Resuelto",
+            "description": "Viandas semanales para 1 persona. Comida casera y nutritiva envasada al vacío.",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "ARS",
+              "price": "150000",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Pack Familiar Resuelto",
+            "description": "Viandas abundantes para resolver las comidas de toda la familia.",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "ARS",
+              "price": "200000",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Pack Nutrición Resuelto",
+            "description": "Planes personalizados para control de peso, dietas Keto, o vegetarianas.",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "ARS",
+              "price": "165000",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "Pack Fit Resuelto",
+            "description": "Comidas altas en proteínas ideales para entrenamiento deportivo.",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "ARS",
+              "price": "160000",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }
+      ]
     }
     </script>
     <meta name="author" content="Sabor Resuelto">
@@ -82,7 +169,7 @@
     <meta property="og:url" content="https://saborresuelto.com.ar/">
     <meta property="og:title" content="Sabor Resuelto - Packs de Comida Saludable">
     <meta property="og:description" content="Resolvé tu semana con comida saludable. Envíos a domicilio en Mendoza.">
-    <meta property="og:image" content="logo-nuevo.png">
+    <meta property="og:image" content="https://saborresuelto.com.ar/food1.webp">
     
     <link rel="icon" href="logo-nuevo.png" type="image/png">
     <meta property="og:locale" content="es_AR">
@@ -104,7 +191,7 @@
     <!-- Preload Critical Resources -->
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="hero-bg.jpg" as="image">
+    <link rel="preload" href="hero-bg.webp" as="image">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Raleway:wght@300;400;600;700&display=swap"
         as="style">
@@ -114,7 +201,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Raleway:wght@300;400;600;700&family=Montserrat:wght@800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -238,7 +325,7 @@
                     encargamos del resto.</h3>
             </div>
             <div class="image-content reveal delay-1">
-                <img src="food3.jpg" alt="Platos saludables de gastronomía semanal envasados al vacío" loading="lazy"
+                <img src="arroz_con_calamares.webp" alt="Arroz con calamares envasado al vacío - Sabor Resuelto" loading="lazy"
                     style="border-radius: 15px; box-shadow: var(--shadow-soft);">
             </div>
         </div>
@@ -255,97 +342,97 @@
 
             <div class="menu-grid">
                 <!-- Plato 1: Fit -->
-                <div class="menu-card reveal">
+                <div class="menu-card reveal" data-category="fit" data-dish="Lomito Salteado con Verduras">
                     <div class="menu-img-wrapper">
-                        <span class="menu-badge badge-fit">Opción Fit</span>
-                        <img src="food1.jpg" alt="Lasaña de Berenjenas">
+                        <span class="menu-badge badge-fit">Sano & Rico</span>
+                        <img src="lomito_salteado.webp" alt="Lomito Salteado con Verduras" loading="lazy">
                     </div>
                     <div class="menu-info">
-                        <h3>Lasaña de Berenjenas</h3>
-                        <p>Capas de berenjenas asadas, queso port salut light y nuestra salsa filetto artesanal.</p>
+                        <h3>Lomito Salteado</h3>
+                        <p>Tiras de lomo tiernas con un mix de vegetales frescos de estación salteados al wok.</p>
                         <div class="menu-footer">
-                            <span class="menu-price-tag">Bajo en Calorías</span>
-                            <a href="https://wa.me/5492615070320" class="btn-text">Consultar <i class="fas fa-arrow-right"></i></a>
+                            <span class="menu-price-tag">Equilibrado</span>
+                            <button class="btn-consultar btn-text" aria-label="Consultar por Lomito Salteado">Pedir ahora <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plato 2: Equilibrado -->
-                <div class="menu-card reveal delay-1">
+                <!-- Plato 2: Clásico -->
+                <div class="menu-card reveal delay-1" data-category="clasico" data-dish="Cerdo a la Mostaza">
                     <div class="menu-img-wrapper">
-                        <span class="menu-badge badge-premium-dish">Más Pedido</span>
-                        <img src="food2.jpg" alt="Pollo al Curry">
+                        <span class="menu-badge badge-premium-dish">Gourmet</span>
+                        <img src="cerdo_mostaza.webp" alt="Cerdo a la Mostaza con verduras asadas" loading="lazy">
                     </div>
                     <div class="menu-info">
-                        <h3>Pollo al Curry & Arroz</h3>
-                        <p>Pechuga tiernizada con leche de coco, especias orientales y colchón de arroz yamaní.</p>
+                        <h3>Cerdo a la Mostaza</h3>
+                        <p>Medallones de cerdo en salsa de mostaza Dijon acompañados de vegetales asados al horno.</p>
                         <div class="menu-footer">
-                            <span class="menu-price-tag">Proteico & Rico</span>
-                            <a href="https://wa.me/5492615070320" class="btn-text">Consultar <i class="fas fa-arrow-right"></i></a>
+                            <span class="menu-price-tag">Sabor Intenso</span>
+                            <button class="btn-consultar btn-text" aria-label="Consultar por Cerdo a la Mostaza">Pedir ahora <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plato 3: Keto -->
-                <div class="menu-card reveal delay-2">
+                <!-- Plato 3: Proteico -->
+                <div class="menu-card reveal delay-2" data-category="clasico" data-dish="Lasaña Casera">
                     <div class="menu-img-wrapper">
-                        <span class="menu-badge badge-keto">Estilo Keto</span>
-                        <img src="food3.jpg" alt="Ternera en Hebras">
+                        <span class="menu-badge badge-premium-dish">Especialidad</span>
+                        <img src="lasagña.webp" alt="Lasaña Casera de carne" loading="lazy">
                     </div>
                     <div class="menu-info">
-                        <h3>Ternera en Hebras</h3>
-                        <p>Carne seleccionada braseada por 8 horas con mix de vegetales asados de estación.</p>
+                        <h3>Lasaña Casera</h3>
+                        <p>Capas de pasta artesanal, carne seleccionada, jamón, queso y nuestra salsa pomodoro.</p>
                         <div class="menu-footer">
-                            <span class="menu-price-tag">0% Carbohidratos</span>
-                            <a href="https://wa.me/5492615070320" class="btn-text">Consultar <i class="fas fa-arrow-right"></i></a>
+                            <span class="menu-price-tag">Súper Abundante</span>
+                            <button class="btn-consultar btn-text" aria-label="Consultar por Lasaña Casera">Pedir ahora <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plato 4: Veggie -->
-                <div class="menu-card reveal delay-3">
+                <!-- Plato 4: Familiar -->
+                <div class="menu-card reveal delay-3" data-category="clasico" data-dish="Berenjenas a la Parmesana">
                     <div class="menu-img-wrapper">
-                        <span class="menu-badge badge-veggie">Vegetariano</span>
-                        <img src="food4.jpg" alt="Canelones de Espinaca">
+                        <span class="menu-badge badge-premium-dish">Hogareño</span>
+                        <img src="berenjena1.webp" alt="Berenjenas a la Parmesana" loading="lazy">
                     </div>
                     <div class="menu-info">
-                        <h3>Canelones de Espinaca</h3>
-                        <p>Pasta casera rellena de espinaca fresca y ricota premium con nuez moscada.</p>
+                        <h3>Berenjenas al Horno</h3>
+                        <p>Capas de berenjenas asadas con muzzarella y nuestra salsa de tomate artesanal.</p>
                         <div class="menu-footer">
                             <span class="menu-price-tag">100% Casero</span>
-                            <a href="https://wa.me/5492615070320" class="btn-text">Consultar <i class="fas fa-arrow-right"></i></a>
+                            <button class="btn-consultar btn-text" aria-label="Consultar por Berenjenas a la Parmesana">Pedir ahora <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plato 5: Osobuco -->
-                <div class="menu-card reveal">
+                <!-- Plato 5: Premium -->
+                <div class="menu-card reveal" data-category="clasico" data-dish="Osobuco al Malbec">
                     <div class="menu-img-wrapper">
-                        <span class="menu-badge badge-premium-dish">Especial Mendoza</span>
-                        <img src="food1.jpg" alt="Osobuco al Malbec">
+                        <span class="menu-badge badge-premium-dish">Estrella</span>
+                        <img src="osobuco_malbec.webp" alt="Osobuco al Malbec" loading="lazy">
                     </div>
                     <div class="menu-info">
                         <h3>Osobuco al Malbec</h3>
-                        <p>Cocción lenta de 12 horas en vino Malbec mendocino con puré rústico.</p>
+                        <p>Nuestra especialidad mendocina: braseado por 8 horas en vino Malbec premium.</p>
                         <div class="menu-footer">
-                            <span class="menu-price-tag">Sabor Intenso</span>
-                            <a href="https://wa.me/5492615070320" class="btn-text">Consultar <i class="fas fa-arrow-right"></i></a>
+                            <span class="menu-price-tag">Gourmet</span>
+                            <button class="btn-consultar btn-text" aria-label="Consultar por Osobuco al Malbec">Pedir ahora <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plato 6: Napolitana -->
-                <div class="menu-card reveal delay-1">
+                <!-- Plato 6: Veggie -->
+                <div class="menu-card reveal" data-category="veggie" data-dish="Canelones de Espinaca">
                     <div class="menu-img-wrapper">
-                        <span class="menu-badge badge-fit">Clásico</span>
-                        <img src="food2.jpg" alt="Milanesas a la Napolitana">
+                        <span class="menu-badge badge-veggie">Veggie</span>
+                        <img src="canelones_espinaca.webp" alt="Canelones de Espinaca" loading="lazy">
                     </div>
                     <div class="menu-info">
-                        <h3>Milanesa a la Napo</h3>
-                        <p>Rebozado artesanal, jamón seleccionado y muzzarella fundida con salsa filetto.</p>
+                        <h3>Canelones de Espinaca</h3>
+                        <p>Pasta fresca rellena de espinaca orgánica y ricota artesanal con crema suave.</p>
                         <div class="menu-footer">
-                            <span class="menu-price-tag">Favorito de Siempre</span>
-                            <a href="https://wa.me/5492615070320" class="btn-text">Consultar <i class="fas fa-arrow-right"></i></a>
+                            <span class="menu-price-tag">Liviano</span>
+                            <button class="btn-consultar btn-text" aria-label="Consultar por Canelones de Espinaca">Pedir ahora <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -365,35 +452,54 @@
                 <h2 class="section-title">Especialidades de la Casa</h2>
                 <p>Nuestras tartas y pasteles son lo que nos define: abundantes, caseros y llenos de sabor.</p>
             </div>
-            <div class="menu-pizarra reveal">
-                <!-- Columna Tartas -->
-                <div class="specialty-column">
-                    <h3>Nuestras Tartas Caseras <span class="badge-tartines">También en Tartines</span></h3>
-                    <ul class="dish-list">
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Pollo, Verdeo y Mozzarella</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Espinaca, Huevo y Mozzarella</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Acelga, Huevo y Mozzarella</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Jamón y Queso (Clásica)</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Capresse (Tomate y Albaca)</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Humita Cremosa</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Verduras y Atún</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Zucchini y Mozzarella</span></li>
-                    </ul>
+
+            <!-- Dual Photo Showcase + Layout -->
+            <div class="tartas-showcase reveal">
+                <!-- Left: Static Dual Photo Layout -->
+                <div class="tartas-dual-gallery">
+                    <div class="tartas-img-wrapper img-front">
+                        <img src="tarta1.webp" alt="Tartas caseras gratinadas de Sabor Resuelto">
+                        <div class="img-badge"><i class="fas fa-fire"></i> Gratinadas al Horno</div>
+                    </div>
+                    <div class="tartas-img-wrapper img-back">
+                        <img src="tarta2.webp" alt="Tartas caseras de espinaca Sabor Resuelto">
+                        <div class="img-badge badge-alt"><i class="fas fa-leaf"></i> Clásicas y Saludables</div>
+                    </div>
                 </div>
 
-                <!-- Columna Pasteles -->
-                <div class="specialty-column">
-                    <h3>Pasteles de la Casa</h3>
-                    <ul class="dish-list">
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-star dish-check"></i> Pastel de Papa con Carne</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-star dish-check"></i> Pastel de Calabaza con Carne</span></li>
-                        <li class="dish-item"><span class="dish-name"><i class="fas fa-star dish-check"></i> Pastel de Batata y Carne</span></li>
-                    </ul>
+                <!-- Right: Menu Lists -->
+                <div class="tartas-menu-content">
+                    <div class="menu-pizarra-compact">
+                        <!-- Columna Tartas -->
+                        <div class="specialty-column">
+                            <h3>Nuestras Tartas Caseras <span class="badge-tartines">También en Tartines</span></h3>
+                            <ul class="dish-list">
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Pollo, Verdeo y Mozzarella</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Espinaca, Huevo y Mozzarella</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Acelga, Huevo y Mozzarella</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Jamón y Queso (Clásica)</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Capresse (Tomate y Albaca)</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Humita Cremosa</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Verduras y Atún</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-dot-circle dish-check"></i> Zucchini y Mozzarella</span></li>
+                            </ul>
+                        </div>
 
-                    <div class="dish-highlight reveal delay-1">
-                        <h4>¿Por qué son especiales?</h4>
-                        <p style="font-size: 1rem; color: var(--text-muted);">Usamos masa casera amasada a mano y rellenos abundantes con ingredientes frescos de la feria mendocina. Directo de nuestro horno a tu casa.</p>
-                        <a href="https://wa.me/5492615070320" class="btn-text mt-3">Consultar disponibilidad hoy</a>
+                        <!-- Columna Pasteles -->
+                        <div class="specialty-column">
+                            <h3>Pasteles de la Casa</h3>
+                            <ul class="dish-list">
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-star dish-check"></i> Pastel de Papa con Carne</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-star dish-check"></i> Pastel de Calabaza con Carne</span></li>
+                                <li class="dish-item"><span class="dish-name"><i class="fas fa-star dish-check"></i> Pastel de Batata y Carne</span></li>
+                            </ul>
+
+                            <div class="dish-highlight reveal delay-1">
+                                <h4>¿Por qué son especiales?</h4>
+                                <p style="font-size: 1rem; color: var(--text-muted);">Usamos masa casera amasada a mano y rellenos abundantes con ingredientes frescos de la feria mendocina.</p>
+                                <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20consultar%20por%20las%20tartas%20y%20pasteles%20de%20Sabor%20Resuelto" class="btn-text mt-3">Consultar disponibilidad hoy <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -424,89 +530,238 @@
         </div>
     </section>
 
+    <!-- NEW: Antes vs Después Section -->
+    <section class="before-after section-padding" style="background-color: var(--pure-white);">
+        <div class="container text-center">
+            <h2 class="section-title reveal">Tu vida <span style="color:var(--appetizing-red);">Sin</span> vs <span style="color:var(--primary-green);">Con</span> Sabor Resuelto</h2>
+            <div class="comparison-grid reveal delay-1">
+                <div class="comparison-card before-card">
+                    <div class="comp-header">
+                        <i class="fas fa-times-circle"></i> ANTES
+                    </div>
+                    <ul class="comp-list">
+                        <li><i class="fas fa-minus"></i> 2 horas diarias cocinando y lavando</li>
+                        <li><i class="fas fa-minus"></i> Gastar de más en delivery por falta de tiempo</li>
+                        <li><i class="fas fa-minus"></i> Comer mal, a deshoras y sin planificación</li>
+                        <li><i class="fas fa-minus"></i> Estrés al llegar del trabajo pensando "¿qué comemos?"</li>
+                    </ul>
+                </div>
+                <div class="comparison-card after-card">
+                    <div class="comp-header">
+                        <i class="fas fa-check-circle"></i> CON SABOR RESUELTO
+                    </div>
+                    <ul class="comp-list">
+                        <li><i class="fas fa-check"></i> Comida lista en 5 minutos. 0 ollas para lavar.</li>
+                        <li><i class="fas fa-check"></i> Ahorro real mensual al evitar deliveries caros</li>
+                        <li><i class="fas fa-check"></i> Dieta balanceada, nutritiva y porcionada</li>
+                        <li><i class="fas fa-check"></i> Paz mental. Abrís la heladera y ya está resuelto</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Calculadora de Ahorro -->
+    <section class="savings-calculator section-padding" style="background-color: #f7fcf9;">
+        <div class="container">
+            <div class="calculator-box reveal">
+                <div class="calc-header text-center">
+                    <h2 class="section-title" style="margin-bottom: 5px;">Calculá tu Ahorro</h2>
+                    <p style="color: var(--text-muted);">¿Sabías que pedir delivery te sale el doble? Descubrilo acá:</p>
+                </div>
+                <div class="calc-grid">
+                    <div class="calc-input-area">
+                        <label for="calc-orders">¿Cuántas veces pedís delivery o comés afuera por semana?</label>
+                        <input type="range" id="calc-orders" min="1" max="14" value="5" class="slider">
+                        <div class="slider-value"><span id="orders-value">5</span> veces/semana</div>
+                        
+                        <label for="calc-cost" style="margin-top: 25px;">¿Cuánto gastás en promedio por cada comida? ($)</label>
+                        <input type="range" id="calc-cost" min="4000" max="25000" step="500" value="9000" class="slider">
+                        <div class="slider-value">$<span id="cost-value">9.000</span></div>
+                    </div>
+                    <div class="calc-result-area">
+                        <div class="calc-box bad">
+                            <h4>Gasto Actual (Mensual)</h4>
+                            <div class="amount" id="current-spend">$180.000</div>
+                        </div>
+                        <div class="calc-box good">
+                            <h4>Con Sabor Resuelto (Pack Indiv.)</h4>
+                            <div class="amount">$150.000</div>
+                        </div>
+                        <div class="savings-tag">
+                            ¡Ahorrás <strong id="total-savings">$30.000</strong> y comés más sano!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Quiz Recomendador de Pack -->
+    <section class="pack-quiz section-padding" style="background-color: var(--section-bg-alt);">
+        <div class="container text-center">
+            <h2 class="section-title reveal">¿No sabés qué pack elegir?</h2>
+            <p class="reveal delay-1">Hacé nuestro test rápido de 2 preguntas y encontrá tu pack ideal.</p>
+            
+            <div class="quiz-container reveal delay-2">
+                <div id="quiz-step-1" class="quiz-step active">
+                    <h3>¿Para cuántas personas es la comida?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="nextQuizStep('solo')"><i class="fas fa-user"></i> Solo para mí</button>
+                        <button class="quiz-btn" onclick="nextQuizStep('pareja')"><i class="fas fa-user-friends"></i> Para 2 personas</button>
+                        <button class="quiz-btn" onclick="nextQuizStep('familia')"><i class="fas fa-users"></i> Familia (3+)</button>
+                    </div>
+                </div>
+                
+                <div id="quiz-step-2" class="quiz-step">
+                    <h3>¿Cuál es tu objetivo nutricional?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="finishQuiz('clasico')"><i class="fas fa-utensils"></i> Comer rico y casero</button>
+                        <button class="quiz-btn" onclick="finishQuiz('bajar')"><i class="fas fa-weight"></i> Controlar mi peso</button>
+                        <button class="quiz-btn" onclick="finishQuiz('entreno')"><i class="fas fa-dumbbell"></i> Entreno mucho (Proteínas)</button>
+                    </div>
+                </div>
+                
+                <div id="quiz-result" class="quiz-step">
+                    <h3>¡Tu pack ideal es el <span id="recommended-pack-name" style="color:var(--appetizing-red);">Pack Individual</span>!</h3>
+                    <p id="recommended-pack-desc">Ideal para resolver tus almuerzos y cenas de la semana sin esfuerzo.</p>
+                    <a id="btn-quiz-wpp" href="#" class="btn-primary mt-3">Quiero este Pack <i class="fab fa-whatsapp"></i></a>
+                    <button class="btn-text" style="display:block; margin: 15px auto 0;" onclick="resetQuiz()">Volver a empezar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Bar -->
+    <div class="urgency-bar" id="urgency-bar">
+        <div class="container">
+            <div class="urgency-content">
+                <i class="fas fa-clock"></i>
+                <span><strong>Pedidos para esta semana:</strong> cierran el <strong>MIÉRCOLES 23:59hs</strong></span>
+                <span class="urgency-spots"><i class="fas fa-fire"></i> Quedan pocos cupos</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Section 4: Packs -->
     <section id="packs" class="packs section-padding">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Nuestros Packs semanales</h2>
+            <div class="text-center mb-5 reveal">
+                <span class="badge-premium mb-2">Completos e Inteligentes</span>
+                <h2 class="section-title">Encontrá tu Pack ideal</h2>
+                <p>Cocinamos por vos para que solo tengas que disfrutar.</p>
             </div>
 
-            <div class="cards-grid">
-                <!-- a) Resuelto Individual -->
+            <div class="packs-grid">
+                <!-- Pack 1: Individual -->
                 <div class="pack-card reveal">
                     <div class="pack-header">
-                        <h3>Resuelto Individual</h3>
+                        <div class="pack-icon"><i class="fas fa-user-check"></i></div>
+                        <h3>Resuelto <br><span>Individual</span></h3>
+                        <div class="pack-price">Desde <strong>$150.000</strong><span>/semana</span></div>
                     </div>
-                    <div class="pack-body">
-                        <p style="font-style: italic; color: #777;">Para quienes buscan organización y practicidad.</p>
-                        <p style="font-weight: 700; color: var(--primary-green); margin: 15px 0;">10 a 14 comidas
-                            semanales</p>
-                        <ul class="pack-features">
-                            <li><i class="fas fa-check"></i> Platos balanceados.</li>
-                            <li><i class="fas fa-check"></i> Menú a elección.</li>
-                        </ul>
-                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20consultar%20por%20el%20Pack%20Individual"
-                            class="btn-pack" target="_blank" rel="noopener noreferrer">Consultar Pack</a>
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> A partir de 10 viandas semanales</li>
+                        <li><i class="fas fa-check"></i> Menú a elección</li>
+                        <li><i class="fas fa-check"></i> Envasado al vacío</li>
+                        <li><i class="fas fa-check"></i> Listo en 5 minutos</li>
+                    </ul>
+                    <div class="pack-footer">
+                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20pedir%20el%20Pack%20Individual%20de%20Sabor%20Resuelto.%20Mi%20zona%20es%3A%20%5Bcompletar%5D.%20D%C3%ADa%20preferido%20de%20entrega%3A%20%5Bcompletar%5D" class="btn-pack" aria-label="Pedir Pack Individual">Pedí tu Pack <i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- b) Resuelto Familiar -->
-                <div class="pack-card reveal delay-1">
+                <!-- Pack 2: Familiar (Popular) -->
+                <div class="pack-card highlight reveal delay-1">
+                    <div class="pack-badge" style="top: 15px !important; z-index: 10 !important;">MÁS ELEGIDO</div>
                     <div class="pack-header">
-                        <h3>Resuelto Familiar</h3>
+                        <div class="pack-icon"><i class="fas fa-house-chimney-user"></i></div>
+                        <h3>Resuelto <br><span>Familiar</span></h3>
+                        <div class="pack-price">Desde <strong>$200.000</strong><span>/semana</span></div>
                     </div>
-                    <div class="pack-body">
-                        <p style="font-style: italic; color: #777;">Pensado para familias que necesitan organización y
-                            sabor.</p>
-                        <p style="font-weight: 700; color: var(--primary-green); margin: 15px 0;">10 a 14 comidas
-                            semanales</p>
-                        <ul class="pack-features">
-                            <li><i class="fas fa-check"></i> Comidas abundantes para compartir.</li>
-                            <li><i class="fas fa-check"></i> Solución completa para la semana.</li>
-                            <li><i class="fas fa-check"></i> Ideal para padres con poco tiempo.</li>
-                        </ul>
-                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20consultar%20por%20el%20Pack%20Familiar"
-                            class="btn-pack" target="_blank" rel="noopener noreferrer">Consultar Pack</a>
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> A partir de 10 viandas semanales</li>
+                        <li><i class="fas fa-check"></i> Ideal para compartir</li>
+                        <li><i class="fas fa-check"></i> Menú variado y casero</li>
+                        <li><i class="fas fa-check"></i> Ahorro real de tiempo</li>
+                    </ul>
+                    <div class="pack-footer">
+                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20pedir%20el%20Pack%20Familiar%20de%20Sabor%20Resuelto.%20Mi%20zona%20es%3A%20%5Bcompletar%5D.%20D%C3%ADa%20preferido%20de%20entrega%3A%20%5Bcompletar%5D" class="btn-pack-primary" aria-label="Pedir Pack Familiar">Solicitar Pack <i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- c) Resuelto Nutricion -->
+                <!-- Pack 3: Nutrición -->
                 <div class="pack-card reveal delay-2">
                     <div class="pack-header">
-                        <h3>Resuelto Nutricion</h3>
+                        <div class="pack-icon"><i class="fas fa-apple-whole"></i></div>
+                        <h3>Resuelto <br><span>Nutrición</span></h3>
+                        <div class="pack-price">Desde <strong>$165.000</strong><span>/semana</span></div>
                     </div>
-                    <div class="pack-body">
-                        <p style="font-style: italic; color: #777;">Adaptado a necesidades específicas.</p>
-                        <p style="font-weight: 700; color: var(--primary-green); margin: 15px 0;">10 a 14 comidas
-                            semanales</p>
-                        <ul class="pack-features">
-                            <li><i class="fas fa-check"></i> Opciones Keto.</li>
-                            <li><i class="fas fa-check"></i> Opciones Vegetarianas.</li>
-                            <li><i class="fas fa-check"></i> Opciones para Diabéticos.</li>
-                            <li><i class="fas fa-check"></i> Pack coordinado según tu estilo de alimentación.</li>
-                        </ul>
-                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20consultar%20por%20el%20Pack%20Nutricion"
-                            class="btn-pack" target="_blank" rel="noopener noreferrer">Consultar Pack</a>
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> Planes personalizados</li>
+                        <li><i class="fas fa-check"></i> Keto, Veggie o Diabéticos</li>
+                        <li><i class="fas fa-check"></i> Control de porciones</li>
+                        <li><i class="fas fa-check"></i> Supervisado por chefs</li>
+                    </ul>
+                    <div class="pack-footer">
+                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20pedir%20el%20Pack%20Nutrici%C3%B3n%20de%20Sabor%20Resuelto.%20Mi%20zona%20es%3A%20%5Bcompletar%5D.%20D%C3%ADa%20preferido%20de%20entrega%3A%20%5Bcompletar%5D" class="btn-pack" aria-label="Pedir Pack Nutrición">Quiero este Pack <i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
-                <!-- d) Resuelto Fit -->
+                <!-- Pack 4: Fit -->
                 <div class="pack-card reveal delay-3">
                     <div class="pack-header">
-                        <h3>Resuelto Fit</h3>
+                        <div class="pack-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h3>Resuelto <br><span>Fit</span></h3>
+                        <div class="pack-price">Desde <strong>$160.000</strong><span>/semana</span></div>
                     </div>
-                    <div class="pack-body">
-                        <p style="font-style: italic; color: #777;">Para quienes entrenan y quieren cuidarse sin
-                            complicaciones.</p>
-                        <p style="font-weight: 700; color: var(--primary-green); margin: 15px 0;">10 a 14 comidas
-                            semanales</p>
-                        <ul class="pack-features">
-                            <li><i class="fas fa-check"></i> Platos equilibrados.</li>
-                            <li><i class="fas fa-check"></i> Enfoque en proteína y rendimiento.</li>
-                            <li><i class="fas fa-check"></i> Ideal gimnasio + rutina activa.</li>
-                        </ul>
-                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20consultar%20por%20el%20Pack%20Fit"
-                            class="btn-pack" target="_blank" rel="noopener noreferrer">Consultar Pack</a>
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> Alto en proteínas</li>
+                        <li><i class="fas fa-check"></i> Bajo en carbohidratos</li>
+                        <li><i class="fas fa-check"></i> Sin conservantes</li>
+                        <li><i class="fas fa-check"></i> Energía para entrenar</li>
+                    </ul>
+                    <div class="pack-footer">
+                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20pedir%20el%20Pack%20Fit%20de%20Sabor%20Resuelto.%20Mi%20zona%20es%3A%20%5Bcompletar%5D.%20D%C3%ADa%20preferido%20de%20entrega%3A%20%5Bcompletar%5D" class="btn-pack" aria-label="Pedir Pack Fit">Pedir Pack Fit <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Methods Strip -->
+            <div class="payment-strip reveal">
+                <p><i class="fas fa-lock"></i> Medios de pago aceptados:</p>
+                <div class="payment-icons">
+                    <div class="payment-item"><i class="fas fa-credit-card"></i><span>Tarjeta</span></div>
+                    <div class="payment-item"><i class="fas fa-mobile-alt"></i><span>Mercado Pago</span></div>
+                    <div class="payment-item"><i class="fas fa-money-bill-wave"></i><span>Efectivo</span></div>
+                    <div class="payment-item"><i class="fas fa-university"></i><span>Transferencia</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zone Coverage Visual Component -->
+    <section class="coverage-section section-padding-compact">
+        <div class="container reveal">
+            <div class="coverage-box">
+                <div class="coverage-info">
+                    <h2 class="section-title mb-3" style="text-align: left;">Zona de Cobertura</h2>
+                    <p>Llegamos a tu puerta en las siguientes zonas de Mendoza:</p>
+                    <ul class="coverage-list">
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Gran Mendoza:</strong> Capital, Godoy Cruz, Guaymallén, Luján y Maipú.</li>
+                        <li><i class="fas fa-truck"></i> <strong>Zona Este:</strong> Hasta San Roque inclusive.</li>
+                    </ul>
+                    <div class="alert-box">
+                        <i class="fas fa-info-circle"></i> Consulta por tu punto exacto si tenés dudas.
+                    </div>
+                </div>
+                <div class="coverage-visual">
+                    <!-- Simple map representation -->
+                    <div class="map-graphic">
+                        <div class="map-circle main-zone">Gran Mendoza</div>
+                        <div class="map-line"></div>
+                        <div class="map-circle east-zone">Zona Este</div>
+                        <div class="map-pin">San Roque</div>
                     </div>
                 </div>
             </div>
@@ -517,7 +772,7 @@
     <section class="quality section-padding-compact">
         <div class="container quality-grid">
             <div class="quality-img-wrapper reveal">
-                <img src="food4.jpg" alt="Ingredientes frescos y seleccionados para viandas saludables" loading="lazy">
+                <img src="tarta_acelga.webp" alt="Ingredientes frescos y seleccionados para viandas saludables" loading="lazy">
             </div>
             <div class="quality-text reveal delay-1">
                 <h2 class="section-title mb-4">Calidad que se nota.</h2>
@@ -535,8 +790,47 @@
         </div>
     </section>
 
-    <!-- Section: Testimonios (Google Style) -->
-    <section class="testimonials section-padding" style="background-color: #fafafa;">
+    <!-- NEW: Quiénes Somos (Trust Builder) -->
+    <section class="about-us section-padding" style="background-color: var(--pure-white);">
+        <div class="container text-center">
+            <div class="about-badge reveal"><i class="fas fa-certificate"></i> Elaboración Mendocina</div>
+            <h2 class="section-title reveal delay-1" style="margin-top: 15px;">Detrás de Sabor Resuelto</h2>
+            <p class="reveal delay-2" style="max-width: 700px; margin: 0 auto 40px; font-size: 1.1rem; color: var(--text-muted);">
+                Somos un equipo apasionado por la cocina casera real. Cocinamos todos los días desde Mendoza con ingredientes frescos de la feria local, <strong>sin conservantes ni químicos raros</strong>, como si cocináramos para nuestra propia familia.
+            </p>
+            <div class="trust-icons-grid reveal delay-3">
+                <div class="trust-icon">
+                    <i class="fas fa-seedling"></i>
+                    <span>Materia Prima Fresca</span>
+                </div>
+                <div class="trust-icon">
+                    <i class="fas fa-temperature-low"></i>
+                    <span>Cadena de Frío Controlada</span>
+                </div>
+                <div class="trust-icon">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Porciones Abundantes</span>
+                </div>
+                <div class="trust-icon">
+                    <i class="fas fa-heart"></i>
+                    <span>Hecho con Amor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Live Counter -->
+    <div class="live-counter text-center" style="background: var(--appetizing-red); color: white; padding: 20px 0;">
+        <div class="container">
+            <span style="font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px;">
+                <i class="fas fa-fire" style="color: #FFD700; margin-right: 10px;"></i> 
+                Ya son <strong id="live-families-counter" style="font-size: 1.4rem;">47</strong> familias en Mendoza con su comida resuelta esta semana.
+            </span>
+        </div>
+    </div>
+
+    <!-- Section: Testimonios (Google Style + Barrios) -->
+    <section class="testimonials section-padding" style="background-color: #fafafa;" id="testimonios">
         <div class="container">
             <h2 class="section-title text-center">Lo que dicen nuestros clientes</h2>
             <div class="google-reviews-grid">
@@ -544,32 +838,30 @@
                 <div class="google-card reveal">
                     <div class="g-header">
                         <div class="g-profile">
-                            <span class="g-avatar">M</span>
+                            <span class="g-avatar">C</span>
                             <div class="g-info">
-                                <h4>Maria Gonzalez</h4>
+                                <h4>Carolina R.</h4>
+                                <span class="g-location"><i class="fas fa-map-marker-alt"></i> Godoy Cruz</span>
                                 <span class="g-stars">★★★★★</span>
                             </div>
                         </div>
                     </div>
-                    <p class="g-text">"La mejor inversión para mi salud y mi tiempo. La comida es riquísima y llega
-                        súper
-                        fresca. ¡Recomendadísimo!"</p>
+                    <p class="g-text">"La mejor inversión para mi salud y mi tiempo. La comida es riquísima y llega súper fresca. Llevo 8 meses pidiéndoles. ¡Recomendadísimo!"</p>
                 </div>
 
                 <!-- Review 2 -->
                 <div class="google-card reveal delay-1">
                     <div class="g-header">
                         <div class="g-profile">
-                            <span class="g-avatar" style="background: #E67E5F;">J</span>
+                            <span class="g-avatar" style="background: #E67E5F;">M</span>
                             <div class="g-info">
-                                <h4>Juan Perez</h4>
-                                <span class="g-date">Local Guide</span>
+                                <h4>Martín L.</h4>
+                                <span class="g-location"><i class="fas fa-map-marker-alt"></i> Guaymallén</span>
                                 <span class="g-stars">★★★★★</span>
                             </div>
                         </div>
                     </div>
-                    <p class="g-text">"Excelente servicio. Los packs son muy completos y me solucionan los almuerzos de
-                        la semana. Muy buena atención."</p>
+                    <p class="g-text">"Con dos hijos y laburando full, Sabor Resuelto me salvó la semana. Los packs son muy completos y la atención es 10/10. No vuelvo a cocinar de lunes a viernes."</p>
                 </div>
 
                 <!-- Review 3 -->
@@ -578,13 +870,77 @@
                         <div class="g-profile">
                             <span class="g-avatar" style="background: #5FB381;">S</span>
                             <div class="g-info">
-                                <h4>Sofia Martinez</h4>
+                                <h4>Sofía V.</h4>
+                                <span class="g-location"><i class="fas fa-map-marker-alt"></i> Capital, Mendoza</span>
                                 <span class="g-stars">★★★★★</span>
                             </div>
                         </div>
                     </div>
-                    <p class="g-text">"Probé el pack Fit y me encantó. Las porciones son perfectas y el sabor es real.
-                        Seguiré pidiendo."</p>
+                    <p class="g-text">"Probé el pack Fit y me encantó. Las porciones son perfectas y el sabor es real, no es comida de dieta aburrida. Ya lo recomendé a todas mis compañeras del gym."</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="google-card reveal delay-3">
+                    <div class="g-header">
+                        <div class="g-profile">
+                            <span class="g-avatar" style="background: #7B68EE;">L</span>
+                            <div class="g-info">
+                                <h4>Laura P.</h4>
+                                <span class="g-location"><i class="fas fa-map-marker-alt"></i> Maipú</span>
+                                <span class="g-stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="g-text">"El osobuco al Malbec es una locura. Mi marido no podía creer que fuera vianda. Nivel restaurant pero en tu casa. Ya van 4 meses seguidos pidiendo."</p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="google-card reveal delay-1">
+                    <div class="g-header">
+                        <div class="g-profile">
+                            <span class="g-avatar" style="background: #F26419;">D</span>
+                            <div class="g-info">
+                                <h4>Diego F.</h4>
+                                <span class="g-location"><i class="fas fa-map-marker-alt"></i> Maipú</span>
+                                <span class="g-stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="g-text">"Excelente calidad en todos los platos. Pedimos el pack familiar y nos rinde un montón. Súper puntuales con la entrega en el centro de Maipú, geniales."</p>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="google-card reveal delay-2">
+                    <div class="g-header">
+                        <div class="g-profile">
+                            <span class="g-avatar" style="background: #3B8C5D;">A</span>
+                            <div class="g-info">
+                                <h4>Agustina M.</h4>
+                                <span class="g-location"><i class="fas fa-map-marker-alt"></i> Gutiérrez, Maipú</span>
+                                <span class="g-stars">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="g-text">"Empecé pidiendo el pack para almorzar en la ofi y ahora la verdad pedimos también para cenar. Tienen un sabor casero que no se encuentra fácil por acá."</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 30px;">
+                <div class="google-badge reveal">
+                    <i class="fab fa-google" style="font-size: 1.5rem; color: #4285F4;"></i>
+                    <span><strong>4.9/5</strong> basado en +120 reseñas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box reveal">
+                <div class="guarantee-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="guarantee-text">
+                    <h3>Garantía Sabor Resuelto</h3>
+                    <p>Si algún plato no te gusta, <strong>te lo reponemos sin costo</strong>. Tu satisfacción es nuestra prioridad. +6 años nos avalan.</p>
                 </div>
             </div>
         </div>
@@ -604,30 +960,44 @@
                     <div class="carousel-track" id="dishCarousel">
                         <!-- Slide 1 -->
                         <div class="carousel-item active">
-                            <img src="food1.jpg" alt="Plato saludable 1" loading="lazy">
+                            <img src="berenjena2.webp" alt="Plato saludable: Berenjenas" loading="lazy">
                             <div class="carousel-caption">
-                                <p>Viandas balanceadas y nutritivas</p>
+                                <p>Ingredientes reales y frescos</p>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="carousel-item">
-                            <img src="food2.jpg" alt="Plato saludable 2" loading="lazy">
+                            <img src="canelones_salsa.webp" alt="Plato saludable: Canelones" loading="lazy">
                             <div class="carousel-caption">
-                                <p>Ingredientes frescos y seleccionados</p>
+                                <p>Sabor casero en cada bocado</p>
                             </div>
                         </div>
                         <!-- Slide 3 -->
                         <div class="carousel-item">
-                            <img src="food3.jpg" alt="Plato saludable 3" loading="lazy">
+                            <img src="osobuco_plato.webp" alt="Plato saludable: Osobuco" loading="lazy">
                             <div class="carousel-caption">
-                                <p>Variedad para toda la semana</p>
+                                <p>Especialidades de alta cocina</p>
                             </div>
                         </div>
                         <!-- Slide 4 -->
                         <div class="carousel-item">
-                            <img src="food4.jpg" alt="Plato saludable 4" loading="lazy">
+                            <img src="zap.webp" alt="Plato saludable: Zapallitos" loading="lazy">
                             <div class="carousel-caption">
-                                <p>Envasado al vacío para mejor conservación</p>
+                                <p>Variedad para toda tu semana</p>
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="carousel-item">
+                            <img src="pimientos_rellenos.webp" alt="Plato saludable: Pimientos Rellenos" loading="lazy">
+                            <div class="carousel-caption">
+                                <p>Ingredientes frescos de temporada</p>
+                            </div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="carousel-item">
+                            <img src="tallarines_espinaca.webp" alt="Plato saludable: Tallarines" loading="lazy">
+                            <div class="carousel-caption">
+                                <p>Pastas artesanales hechas a mano</p>
                             </div>
                         </div>
                     </div>
@@ -647,131 +1017,173 @@
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 6: Preguntas Frecuentes -->
-    <section id="faq" class="faq-section section-padding" style="background: #FFE5B4;">
+    <section id="faq" class="faq-section section-padding">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Preguntas Frecuentes</h2>
-                <p>Resolvemos tus dudas para que pedir sea más fácil</p>
+            <div class="text-center mb-5 reveal">
+                <span class="badge-premium mb-2">Dudas Frecuentes</span>
+                <h2 class="section-title">Te sacamos las dudas</h2>
+                <p>Todo lo que necesitás saber sobre Sabor Resuelto.</p>
             </div>
-            <div class="faq-grid">
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h3>¿Cómo funciona el pedido?</h3>
+            <div class="faq-accordion reveal">
+                <!-- Item 1 -->
+                <div class="faq-acc-item">
+                    <button class="faq-acc-header" aria-expanded="false">
+                        <span>¿Cómo funciona el pedido?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-acc-body">
+                        <p>Elegís tu pack ideal, nos contactás por WhatsApp o el formulario, confirmás tu menú semanal y coordinamos la entrega. ¡Así de simple!</p>
                     </div>
-                    <p class="faq-answer">Elegís tu pack ideal, nos contactás por WhatsApp o el
-                        formulario, confirmás tu
-                        menú semanal y coordinamos la entrega. ¡Así de simple!</p>
                 </div>
-                <div class="faq-item reveal delay-1">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h3>¿Cuánto duran los platos envasados al vacío?</h3>
+                <!-- Item 2 -->
+                <div class="faq-acc-item">
+                    <button class="faq-acc-header" aria-expanded="false">
+                        <span>¿Cuánto duran los platos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-acc-body">
+                        <p>En heladera duran hasta 7 días y en freezer hasta 3 meses. Todos nuestros platos están envasados al vacío para máxima frescura.</p>
                     </div>
-                    <p class="faq-answer">En heladera duran hasta 7 días y en freezer hasta 3 meses.
-                        Todos nuestros
-                        platos están envasados al vacío para máxima frescura.</p>
                 </div>
-                <div class="faq-item reveal delay-2">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h3>¿Puedo personalizar mi menú?</h3>
+                <!-- Item 3 -->
+                <div class="faq-acc-item">
+                    <button class="faq-acc-header" aria-expanded="false">
+                        <span>¿Puedo personalizar mi menú?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-acc-body">
+                        <p>¡Sí! Podés elegir los platos que más te gusten de nuestro menú semanal. Tenemos opciones Fit, Keto, Vegetarianas y para Diabéticos.</p>
                     </div>
-                    <p class="faq-answer">¡Sí! Podés elegir los platos que más te gusten de nuestro menú
-                        semanal.
-                        Tenemos opciones Fit, Keto, Vegetarianas y para Diabéticos.</p>
                 </div>
-                <div class="faq-item reveal delay-3">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h3>¿Cuál es el mínimo de pedido?</h3>
+                <!-- Item 4 -->
+                <div class="faq-acc-item">
+                    <button class="faq-acc-header" aria-expanded="false">
+                        <span>¿Cuál es el mínimo de pedido?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-acc-body">
+                        <p>El pack Individual arranca desde 10 comidas semanales. Consultanos por WhatsApp para armar el pack perfecto para vos.</p>
                     </div>
-                    <p class="faq-answer">El pack Individual arranca desde 10 comidas semanales.
-                        Consultanos por
-                        WhatsApp para armar el pack perfecto para vos.</p>
                 </div>
-                <div class="faq-item reveal">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h3>¿A qué zonas hacen entrega?</h3>
+                <!-- Item 5 -->
+                <div class="faq-acc-item">
+                    <button class="faq-acc-header" aria-expanded="false">
+                        <span>¿A qué zonas hacen entrega?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-acc-body">
+                        <p>Entregamos en Gran Mendoza y Zona Este (hasta San Roque). Si estás en otra zona, consultanos igual!</p>
                     </div>
-                    <p class="faq-answer">Entregamos en <strong>Gran Mendoza y Zona Este</strong>. Si
-                        estás en otra
-                        zona, consultanos igual, ¡podemos coordinar!</p>
                 </div>
-                <div class="faq-item reveal delay-1">
-                    <div class="faq-question">
-                        <i class="fas fa-question-circle"></i>
-                        <h3>¿Qué métodos de pago aceptan?</h3>
+                <!-- Item 6 -->
+                <div class="faq-acc-item">
+                    <button class="faq-acc-header" aria-expanded="false">
+                        <span>¿Qué métodos de pago aceptan?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-acc-body">
+                        <p>Aceptamos efectivo, transferencia bancaria, Mercado Pago y tarjetas de débito/crédito. Pagás al recibir o previo al envío.</p>
                     </div>
-                    <p class="faq-answer">Aceptamos <strong>efectivo, transferencia bancaria, Mercado
-                            Pago y tarjetas de
-                            débito/crédito</strong>. Pagás al recibir o previo al envío según prefieras.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 7: Contact Form -->
+    <!-- First-Time Offer Section -->
+    <section class="first-time-offer section-padding">
+        <div class="container">
+            <div class="offer-box reveal">
+                <div class="offer-badge"><i class="fas fa-gift"></i> OFERTA ESPECIAL</div>
+                <h2 class="section-title" style="color: white;">¿Primera vez?</h2>
+                <p class="offer-subtitle">Probá un <strong>Mini Pack de 5 viandas</strong> con <strong>envío gratis</strong> para conocernos sin compromiso.</p>
+                <div class="offer-details">
+                    <div class="offer-feature"><i class="fas fa-check-circle"></i> 5 viandas a elección</div>
+                    <div class="offer-feature"><i class="fas fa-check-circle"></i> Envío sin costo</div>
+                    <div class="offer-feature"><i class="fas fa-check-circle"></i> Sin suscripción obligatoria</div>
+                </div>
+                <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20probar%20el%20Mini%20Pack%20de%205%20viandas%20con%20env%C3%ADo%20gratis%20para%20nuevos%20clientes.%20Mi%20zona%20es%3A%20%5Bcompletar%5D" class="btn-offer">Quiero probarlo <i class="fab fa-whatsapp"></i></a>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 15px;">🔥 Cupos limitados por semana</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Order Form (Pedido Rápido) -->
     <section id="contacto" class="contact-section section-padding">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="section-title" id="contact-title">¿Tenés alguna consulta?</h2>
-                <p>Dejanos tu mensaje y te responderemos a la brevedad.</p>
+                <h2 class="section-title" id="contact-title">Hacé tu pedido rápido</h2>
+                <p>Completá tus datos y te contactamos para confirmar tu pack.</p>
             </div>
             <div class="contact-wrapper">
                 <form class="contact-form" id="contactForm" aria-labelledby="contact-title">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nombre">Nombre completo</label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" aria-label="Nombre completo">
                         </div>
                         <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" required placeholder="Tu teléfono">
+                            <label for="telefono">WhatsApp / Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 2611234567" aria-label="WhatsApp o Teléfono">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                            <span class="error-msg">Ingresá un email válido</span>
+                            <label for="pack">¿Qué Pack te interesa?</label>
+                            <select id="pack" name="pack" required aria-label="Seleccionar pack">
+                                <option value="" disabled selected>Elegí tu pack</option>
+                                <option value="Pack Individual ($150.000)">Pack Individual — Desde $150.000/sem</option>
+                                <option value="Pack Familiar ($200.000)">Pack Familiar — Desde $200.000/sem</option>
+                                <option value="Pack Nutrición ($165.000)">Pack Nutrición — Desde $165.000/sem</option>
+                                <option value="Pack Fit ($160.000)">Pack Fit — Desde $160.000/sem</option>
+                                <option value="Mini Pack Prueba">Mini Pack Prueba (5 viandas)</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label for="telefono_opcional">Teléfono Opcional</label>
-                            <input type="tel" id="telefono_opcional" name="telefono_opcional" placeholder="Tu teléfono">
+                            <label for="zona">¿En qué zona estás?</label>
+                            <select id="zona" name="zona" required aria-label="Seleccionar zona de entrega">
+                                <option value="" disabled selected>Seleccioná tu zona</option>
+                                <option value="Capital">Capital</option>
+                                <option value="Godoy Cruz">Godoy Cruz</option>
+                                <option value="Guaymallén">Guaymallén</option>
+                                <option value="Las Heras">Las Heras</option>
+                                <option value="Luján de Cuyo">Luján de Cuyo</option>
+                                <option value="Maipú">Maipú</option>
+                                <option value="San Martín">San Martín</option>
+                                <option value="Zona Este">Zona Este (hasta San Roque)</option>
+                                <option value="Otra zona">Otra zona (consultar)</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required
-                            placeholder="Contanos qué pack te interesa o dejanos tu consulta..."></textarea>
+                        <label for="mensaje">¿Algún comentario o preferencia alimentaria?</label>
+                        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Ej: Soy celíaco, prefiero sin picante, etc." aria-label="Comentarios o preferencias"></textarea>
                     </div>
-                        <!-- Honeypot Security Layer -->
-                        <div style="display:none;">
-                            <label>Si eres humano, no llenes esto:</label>
-                            <input type="text" name="b_honeypot" tabindex="-1" value="">
-                        </div>
-                        <button type="submit" class="btn-primary btn-form">Enviar Consulta</button>
+                    <!-- Honeypot Security Layer -->
+                    <div style="display:none;">
+                        <label>Si eres humano, no llenes esto:</label>
+                        <input type="text" name="b_honeypot" tabindex="-1" value="">
+                    </div>
+                    <button type="submit" class="btn-primary btn-form"><i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Reservar mi Pack para esta semana</button>
                     <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 15px;">
                         <i class="fas fa-clock" style="color: var(--vibrant-nature); margin-right: 5px;"></i>
-                        Tiempo de respuesta promedio: menos de 2 horas
+                        Te confirmamos en menos de 2 horas por WhatsApp
                     </p>
                 </form>
                 <div class="contact-info">
                     <div class="info-card">
                         <i class="fab fa-whatsapp"></i>
-                        <h3>WhatsApp</h3>
+                        <h3>WhatsApp Directo</h3>
                         <p>+54 9 261 507 0320</p>
-                        <a href="https://wa.me/5492615070320" target="_blank" rel="noopener noreferrer"
-                            class="btn-secondary">Escribinos</a>
+                        <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20hacer%20mi%20pedido%20semanal%20de%20Sabor%20Resuelto" target="_blank" rel="noopener noreferrer"
+                            class="btn-secondary">Pedir ahora</a>
                     </div>
                     <div class="info-card">
                         <i class="fas fa-envelope"></i>
@@ -781,7 +1193,7 @@
                     </div>
                     <div class="info-card">
                         <i class="fas fa-clock"></i>
-                        <h3>Horarios</h3>
+                        <h3>Horarios de Pedido</h3>
                         <p>Lunes a Viernes<br>9:00 - 18:00 hs</p>
                     </div>
                     <div class="info-card">
@@ -794,7 +1206,6 @@
         </div>
     </section>
 
-    <!-- Section 8: CTA Final -->
     <section class="section-padding text-center" style="background-color: var(--primary-green-light);">
         <div class="container reveal">
             <h2 style="font-size: 2.5rem; color: var(--dark-green);">Tu semana puede estar resuelta
@@ -876,109 +1287,110 @@
             </div>
         </div>
     </div>
-
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Sabor Resuelto",
+        "image": "https://saborresuelto.com.ar/food1.jpg",
+        "description": "Servicio de packs semanales de comida saludable en Mendoza. Viandas envasadas al vacío con opciones Fit, Keto y Vegetarianas.",
+        "@id": "https://saborresuelto.com.ar",
+        "url": "https://saborresuelto.com.ar/",
+        "telephone": "+542615070320",
+        "email": "saborresuelto@gmail.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mendoza",
+          "addressRegion": "Mendoza",
+          "addressCountry": "AR"
+        },
+        "geo": {
+          "@type": "GeoCircle",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Viandas Saludables a Domicilio"
+          },
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": -32.8895,
+            "longitude": -68.8458
+          },
+          "description": "Gran Mendoza y Zona Este hasta San Roque"
+        },
+        "areaServed": ["Gran Mendoza", "Godoy Cruz", "Guaymallén", "Luján", "Maipú", "San Martín", "Zona Este"],
+        "servesCuisine": "Healthy, Homemade",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cómo funciona el pedido?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Elegís tu pack ideal, nos contactás por WhatsApp o el formulario, confirmás tu menú semanal y coordinamos la entrega. ¡Así de simple!"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto duran los platos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En heladera duran hasta 7 días y en freezer hasta 3 meses. Todos nuestros platos están envasados al vacío para máxima frescura."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo personalizar mi menú?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "¡Sí! Podés elegir los platos que más te gusten de nuestro menú semanal. Tenemos opciones Fit, Keto, Vegetarianas y para Diabéticos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es el mínimo de pedido?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El pack Individual arranca desde 10 comidas semanales. Consultanos por WhatsApp para armar el pack perfecto para vos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿A qué zonas hacen entrega?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Entregamos en Gran Mendoza y Zona Este (hasta San Roque). Si estás en otra zona, consultanos igual!"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué métodos de pago aceptan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aceptamos efectivo, transferencia bancaria, Mercado Pago y tarjetas de débito/crédito. Pagás al recibir o previo al envío."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    <!-- Schema.org Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Sabor Resuelto",
-      "image": "https://saborresuelto.com.ar/logo.png",
-      "description": "Servicio de packs semanales de comida saludable en Mendoza. Viandas envasadas al vacío con opciones Fit, Keto y Vegetarianas.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Mendoza",
-        "addressRegion": "Mendoza",
-        "addressCountry": "AR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -32.8895,
-        "longitude": -68.8458
-      },
-      "url": "https://saborresuelto.com.ar",
-      "telephone": "+5492615070320",
-      "email": "saborresuelto@gmail.com",
-      "priceRange": "$$",
-      "servesCuisine": "Comida Saludable",
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": -32.8895,
-          "longitude": -68.8458
-        },
-        "geoRadius": "30000"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      }
-    }
-    </script>
-
-    <!-- Schema.org FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Cómo funciona el pedido?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Elegís tu pack ideal, nos contactás por WhatsApp o el formulario, confirmás tu menú semanal y coordinamos la entrega. ¡Así de simple!"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuánto duran los platos envasados al vacío?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "En heladera duran hasta 7 días y en freezer hasta 3 meses. Todos nuestros platos están envasados al vacío para máxima frescura."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Puedo personalizar mi menú?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "¡Sí! Podés elegir los platos que más te gusten de nuestro menú semanal. Tenemos opciones Fit, Keto, Vegetarianas y para Diabéticos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuál es el mínimo de pedido?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El pack Individual arranca desde 10 comidas semanales. Consultanos por WhatsApp para armar el pack perfecto para vos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿A qué zonas hacen entrega?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Entregamos en Gran Mendoza y Zona Este. Si estás en otra zona, consultanos igual, ¡podemos coordinar!"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué métodos de pago aceptan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Aceptamos efectivo, transferencia bancaria, Mercado Pago y tarjetas de débito/crédito. Pagás al recibir o previo al envío según prefieras."
-          }
-        }
-      ]
-    }
-    </script>
+    <!-- Mobile Sticky CTA -->
+    <a href="https://wa.me/5492615070320?text=Hola!%20Quiero%20pedir%20mi%20pack%20de%20Sabor%20Resuelto" class="mobile-sticky-cta d-md-none" aria-label="Pedir ahora por WhatsApp">
+        <div class="cta-pulse"><i class="fab fa-whatsapp"></i></div>
+        <span>¡Pedí tu Pack de la Semana!</span>
+    </a>
 </body>
-
 </html>

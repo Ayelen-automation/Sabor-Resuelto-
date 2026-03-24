@@ -16,7 +16,7 @@ from PIL import Image
 
 def convert_to_webp(directory):
     for filename in os.listdir(directory):
-        if filename.endswith(".jpg"):
+        if filename.lower().endswith(('.jpg', '.jpeg', '.png')):
             filepath = os.path.join(directory, filename)
             webp_filepath = os.path.join(directory, filename.rsplit('.', 1)[0] + '.webp')
             

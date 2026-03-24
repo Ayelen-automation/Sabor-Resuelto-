@@ -54,38 +54,88 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth navigation scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const navHeight = navbar ? navbar.offsetHeight : 0;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 
-    // Contact form handler
+    // Dynamic WhatsApp for Menu Dishes
+    const consultBtns = document.querySelectorAll('.btn-consultar');
+    consultBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.menu-card');
+            const dishName = card.getAttribute('data-dish');
+            const message = `Hola! Quiero consultar por el plato: ${dishName} de Sabor Resuelto.`;
+            const waUrl = `https://wa.me/5492615070320?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        });
+    });
+
+    // FAQ Accordion Logic
+    const faqHeaders = document.querySelectorAll('.faq-acc-header');
+    faqHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close other items
+            document.querySelectorAll('.faq-acc-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-acc-header').setAttribute('aria-expanded', 'false');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+                header.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    // Contact/Order form handler
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const btn = this.querySelector('.btn-primary');
-            const originalText = btn.textContent;
+            // Honeypot check
+            const honeypot = this.querySelector('input[name="b_honeypot"]').value;
+            if (honeypot) {
+                console.warn('Bot detected via honeypot');
+                return;
+            }
 
-            // Just simulate send for now then WhatsApp
-            btn.textContent = 'Enviando...';
+            const btn = this.querySelector('.btn-primary');
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 10px;"></i> Enviando...';
 
             setTimeout(() => {
                 const nombre = document.getElementById('nombre').value;
+                const telefono = document.getElementById('telefono').value;
                 const packEl = document.getElementById('pack');
+                const zonaEl = document.getElementById('zona');
+                const mensajeEl = document.getElementById('mensaje');
+                
                 const pack = packEl && packEl.value ? packEl.value : 'un pack';
-                const whatsappMessage = `Hola! Soy ${nombre}. Quiero consultar por ${pack} de Sabor Resuelto.`;
+                const zona = zonaEl && zonaEl.value ? zonaEl.value : 'Mi zona';
+                const mensaje = mensajeEl && mensajeEl.value ? `\nNota: ${mensajeEl.value}` : '';
+                
+                const whatsappMessage = `Hola! Soy ${nombre}.\nQuiero pedir: ${pack}\nZona de entrega: ${zona}\nMi teléfono: ${telefono}${mensaje}`;
                 window.open(`https://wa.me/5492615070320?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-                btn.textContent = '¡Listo!';
+                btn.innerHTML = '<i class="fas fa-check" style="margin-right: 10px;"></i> ¡Pedido enviado!';
                 contactForm.reset();
-                setTimeout(() => btn.textContent = originalText, 2000);
+                setTimeout(() => btn.innerHTML = originalText, 3000);
             }, 800);
         });
     }
@@ -177,14 +227,43 @@ document.addEventListener('DOMContentLoaded', () => {
         dots[currentSlideIndex].classList.add('active');
     };
 
-    // Auto-play carousel (optional - uncomment to enable)
-    // setInterval(() => moveCarousel(1), 5000);
+    // Auto-play carousel
+    let carouselInterval = setInterval(() => moveCarousel(1), 5000);
+
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+        carouselContainer.addEventListener('mouseleave', () => {
+            clearInterval(carouselInterval);
+            carouselInterval = setInterval(() => moveCarousel(1), 5000);
+        });
+    }
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') moveCarousel(-1);
         if (e.key === 'ArrowRight') moveCarousel(1);
     });
+
+    // Touch / Swipe Navigation for Mobile
+    if (carouselContainer) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carouselContainer.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        carouselContainer.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) moveCarousel(1); // Swipe left
+            if (touchEndX > touchStartX + 50) moveCarousel(-1); // Swipe right
+        }
+    }
 
     // Form Validation Feedback
     if (contactForm) {
@@ -278,6 +357,123 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize immediately without timeouts for seamless load
     createPremiumVeggies();
+
+    // --- Savings Calculator Logic ---
+    const calcOrders = document.getElementById('calc-orders');
+    const calcCost = document.getElementById('calc-cost');
+    const ordersValue = document.getElementById('orders-value');
+    const costValue = document.getElementById('cost-value');
+    const currentSpendEl = document.getElementById('current-spend');
+    const totalSavingsEl = document.getElementById('total-savings');
+
+    function updateCalculator() {
+        if (!calcOrders) return;
+        
+        const orders = parseInt(calcOrders.value);
+        const cost = parseInt(calcCost.value);
+        
+        // Update labels
+        ordersValue.textContent = orders;
+        costValue.textContent = cost.toLocaleString('es-AR');
+        
+        // Calculate costs (Monthly = weekly * 4)
+        const weeklySpend = orders * cost;
+        const monthlySpend = weeklySpend * 4;
+        
+        // Sabor Resuelto Pack Individual monthly cost (150,000 * 4)
+        const srMonthly = 150000 * 4;
+        
+        // Savings
+        const savings = monthlySpend - srMonthly;
+        
+        // Update DOM
+        currentSpendEl.textContent = '$' + monthlySpend.toLocaleString('es-AR');
+        
+        if (savings > 0) {
+            totalSavingsEl.textContent = '$' + savings.toLocaleString('es-AR');
+            totalSavingsEl.parentElement.innerHTML = `¡Ahorrás <strong id="total-savings">$${savings.toLocaleString('es-AR')}</strong> y comés más sano!`;
+            totalSavingsEl.parentElement.style.background = 'var(--appetizing-red)';
+        } else {
+            totalSavingsEl.parentElement.innerHTML = `¡Comés mucho más sano y casero por un valor similar!`;
+            totalSavingsEl.parentElement.style.background = 'var(--primary-green)';
+        }
+    }
+
+    if (calcOrders && calcCost) {
+        calcOrders.addEventListener('input', updateCalculator);
+        calcCost.addEventListener('input', updateCalculator);
+        updateCalculator(); // init
+    }
+
+    // --- Pack Recommender Quiz Logic ---
+    let quizAnswers = { persons: '', objective: '' };
+
+    window.nextQuizStep = function(answer) {
+        quizAnswers.persons = answer;
+        if (answer === 'familia') {
+            // Shortcut for family
+            finishQuiz('familiar_direct');
+            return;
+        }
+        document.getElementById('quiz-step-1').classList.remove('active');
+        document.getElementById('quiz-step-2').classList.add('active');
+    };
+
+    window.finishQuiz = function(answer) {
+        quizAnswers.objective = answer;
+        
+        document.getElementById('quiz-step-1').classList.remove('active');
+        document.getElementById('quiz-step-2').classList.remove('active');
+        
+        // Logic to select pack
+        let recommendedPack = "Pack Individual";
+        let packDesc = "Ideal para resolver tus almuerzos y cenas de la semana sin esfuerzo.";
+        let wppMsg = "Hola! Hice el test en la web y me recomendó el Pack Individual. Quiero encargarlo.";
+
+        if (quizAnswers.persons === 'familia' || answer === 'familiar_direct') {
+            recommendedPack = "Pack Familiar";
+            packDesc = "Viandas abundantes para resolver las comidas de toda la familia de lunes a viernes.";
+            wppMsg = "Hola! Hice el test en la web y me recomendó el Pack Familiar. Quiero encargarlo.";
+        } else if (answer === 'bajar' || answer === 'entreno') {
+            recommendedPack = answer === 'bajar' ? "Pack Nutrición" : "Pack Fit";
+            packDesc = answer === 'bajar' ? "Planes personalizados para cuidar tu peso con comida rica y sana." : "Alto en proteínas, ideal para acompañar tu entrenamiento.";
+            wppMsg = `Hola! Hice el test en la web y me recomendó el ${recommendedPack}. Quiero encargarlo.`;
+        } else if (quizAnswers.persons === 'pareja') {
+            recommendedPack = "Pack Pareja (Individual x2)";
+            packDesc = "Perfecto para dos personas. 14 viandas semanales para que los dos coman increíble.";
+            wppMsg = "Hola! Hice el test en la web y me recomendó pedir viandas para mi pareja y yo. Quiero consultar los combos.";
+        }
+
+        document.getElementById('recommended-pack-name').textContent = recommendedPack;
+        document.getElementById('recommended-pack-desc').textContent = packDesc;
+        
+        const wppBtn = document.getElementById('btn-quiz-wpp');
+        wppBtn.href = `https://wa.me/5492615070320?text=${encodeURIComponent(wppMsg)}`;
+        
+        document.getElementById('quiz-result').classList.add('active');
+    };
+
+    window.resetQuiz = function() {
+        document.getElementById('quiz-result').classList.remove('active');
+        document.getElementById('quiz-step-2').classList.remove('active');
+        document.getElementById('quiz-step-1').classList.add('active');
+        quizAnswers = { persons: '', objective: '' };
+    };
+
+    // --- Live Counter Logic ---
+    const liveCounterEl = document.getElementById('live-families-counter');
+    if (liveCounterEl) {
+        let currentCount = 47;
+        setInterval(() => {
+            // 30% chance to increment by 1 every 8 seconds, simulating live activity
+            if (Math.random() > 0.7 && currentCount < 150) {
+                currentCount++;
+                liveCounterEl.textContent = currentCount;
+                liveCounterEl.style.color = '#FFD700'; // Flash gold
+                setTimeout(() => liveCounterEl.style.color = 'inherit', 500);
+            }
+        }, 8000);
+    }
 
     console.log('✨ Sabor Resuelto Modernized');
 });
