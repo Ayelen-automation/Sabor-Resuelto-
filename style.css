@@ -1492,3 +1492,60 @@ body { padding-bottom: 0px; }
     .trust-icons-grid { gap: 20px; }
     .trust-icon { width: 40%; max-width: none; }
 }
+
+/* --- MOBILE HEIGHT OPTIMIZATION --- */
+@media (max-width: 768px) {
+    /* Reduce global padding to shorten the page */
+    .section-padding { padding: 50px 0 !important; }
+    .hero { min-height: auto !important; padding: 130px 0 60px !important; }
+
+    /* Convert all heavy vertical stacks into horizontal swipeable sliders on mobile */
+    .menu-grid, .google-reviews-grid, .comparison-grid, .trust-icons-grid {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 25px;
+        gap: 20px;
+        justify-content: flex-start;
+        /* Allow sliding edge-to-edge ignoring container padding */
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Standardize card widths inside sliders */
+    .menu-grid > *, .google-reviews-grid > *, .comparison-grid > * {
+        min-width: 85vw !important;
+        max-width: 85vw !important;
+        scroll-snap-align: center;
+        flex: 0 0 auto;
+    }
+    
+    /* Trust icons logic */
+    .trust-icons-grid > * {
+        min-width: 45vw !important;
+        max-width: 45vw !important;
+        scroll-snap-align: center;
+        flex: 0 0 auto;
+    }
+
+    /* Custom elegant scrollbars for sliders */
+    .menu-grid::-webkit-scrollbar, .google-reviews-grid::-webkit-scrollbar, 
+    .comparison-grid::-webkit-scrollbar, .trust-icons-grid::-webkit-scrollbar {
+        height: 5px;
+    }
+    .menu-grid::-webkit-scrollbar-track, .google-reviews-grid::-webkit-scrollbar-track, 
+    .comparison-grid::-webkit-scrollbar-track, .trust-icons-grid::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.05);
+        border-radius: 10px;
+        margin: 0 15px;
+    }
+    .menu-grid::-webkit-scrollbar-thumb, .google-reviews-grid::-webkit-scrollbar-thumb, 
+    .comparison-grid::-webkit-scrollbar-thumb, .trust-icons-grid::-webkit-scrollbar-thumb {
+        background: var(--primary-green);
+        border-radius: 10px;
+    }
+}
