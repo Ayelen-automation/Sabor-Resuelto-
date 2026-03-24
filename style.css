@@ -1400,6 +1400,20 @@ footer { background: #FFFFFF; color: var(--text-deep); padding: 50px 0; text-ali
 }
 .quiz-btn i { font-size: 1.4rem; color: var(--primary-green); }
 
+/* --- Pack Recommender Quiz --- */
+.quiz-container { max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: var(--shadow-soft); }
+.quiz-step { display: none; animation: fadeInUpNative 0.5s ease forwards; }
+.quiz-step.active { display: block; }
+.quiz-options { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+.quiz-btn { 
+    background: var(--section-bg-alt); border: 2px solid transparent; padding: 15px 25px; 
+    border-radius: 12px; font-size: 1.1rem; font-weight: 700; color: var(--text-deep); 
+    cursor: pointer; transition: all 0.3s; display: flex; align-items: center; 
+    justify-content: flex-start; gap: 15px; width: 100%; text-align: left;
+}
+.quiz-btn:hover { border-color: var(--primary-green); background: #f1f8f3; transform: translateX(5px); }
+.quiz-btn i { font-size: 1.5rem; color: var(--primary-green); width: 30px; text-align: center; }
+
 /* --- Mobile Sticky CTA --- */
 .mobile-sticky-cta {
     position: fixed;

@@ -201,7 +201,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Raleway:wght@300;400;600;700&family=Montserrat:wght@800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="style.css?v=11">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -607,18 +607,18 @@
                 <div id="quiz-step-1" class="quiz-step active">
                     <h3>¿Para cuántas personas es la comida?</h3>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="nextQuizStep('solo')"><i class="fas fa-user"></i> Solo para mí</button>
-                        <button class="quiz-btn" onclick="nextQuizStep('pareja')"><i class="fas fa-user-friends"></i> Para 2 personas</button>
-                        <button class="quiz-btn" onclick="nextQuizStep('familia')"><i class="fas fa-users"></i> Familia (3+)</button>
+                        <button class="quiz-btn" data-answer="solo"><i class="fas fa-user"></i> Solo para mí</button>
+                        <button class="quiz-btn" data-answer="pareja"><i class="fas fa-user-friends"></i> Para 2 personas</button>
+                        <button class="quiz-btn" data-answer="familia"><i class="fas fa-users"></i> Familia (3+)</button>
                     </div>
                 </div>
                 
                 <div id="quiz-step-2" class="quiz-step">
                     <h3>¿Cuál es tu objetivo nutricional?</h3>
                     <div class="quiz-options">
-                        <button class="quiz-btn" onclick="finishQuiz('clasico')"><i class="fas fa-utensils"></i> Comer rico y casero</button>
-                        <button class="quiz-btn" onclick="finishQuiz('bajar')"><i class="fas fa-weight"></i> Controlar mi peso</button>
-                        <button class="quiz-btn" onclick="finishQuiz('entreno')"><i class="fas fa-dumbbell"></i> Entreno mucho (Proteínas)</button>
+                        <button class="quiz-btn" data-answer="clasico"><i class="fas fa-utensils"></i> Comer rico y casero</button>
+                        <button class="quiz-btn" data-answer="bajar"><i class="fas fa-weight"></i> Controlar mi peso</button>
+                        <button class="quiz-btn" data-answer="entreno"><i class="fas fa-dumbbell"></i> Entreno mucho (Proteínas)</button>
                     </div>
                 </div>
                 
@@ -626,7 +626,7 @@
                     <h3>¡Tu pack ideal es el <span id="recommended-pack-name" style="color:var(--appetizing-red);">Pack Individual</span>!</h3>
                     <p id="recommended-pack-desc">Ideal para resolver tus almuerzos y cenas de la semana sin esfuerzo.</p>
                     <a id="btn-quiz-wpp" href="#" class="btn-primary mt-3">Quiero este Pack <i class="fab fa-whatsapp"></i></a>
-                    <button class="btn-text" style="display:block; margin: 15px auto 0;" onclick="resetQuiz()">Volver a empezar</button>
+                    <button class="btn-text" id="reset-quiz-btn" style="display:block; margin: 15px auto 0;">Volver a empezar</button>
                 </div>
             </div>
         </div>
